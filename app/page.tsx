@@ -1,7 +1,10 @@
-import Hero from "./components/hero/Hero"
 
-export default function Home({ children }: { children: React.ReactNode }) {
+
+
+export default function Home() {
   return (
-   <Hero />
+   <h2>
+    Home
+   </h2>
   )
 }
