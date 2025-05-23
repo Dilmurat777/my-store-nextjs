@@ -1,7 +1,7 @@
-import Layout from "./components/layout/Layout"
+import Hero from "./components/hero/Hero"
 
 export default function Home({ children }: { children: React.ReactNode }) {
   return (
-   <h1 className="text-2xl font-bold">Добро пожаловать в магазин</h1>
+   <Hero />
   )
 }
