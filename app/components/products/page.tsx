@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useState } from 'react';
 import { products } from '@/app/data/products';
 import CategoryFilter from '../categoryFilter/CategoryFilter';
@@ -23,8 +23,8 @@ export default function ProductPage() {
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {filteredProducts.map((product) => {
-			return <ProductCard key={product.id} product={product} />
-})}
+          return <ProductCard key={product.id} product={product} />;
+        })}
       </div>
     </div>
   );

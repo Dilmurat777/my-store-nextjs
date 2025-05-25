@@ -5,9 +5,8 @@ import { persist } from 'zustand/middleware';
 interface Product {
   id: number;
   title: string;
-  price: number;
   image: string;
-  description?: string;
+  price: number;
 }
 
 interface FavoritesStore {
@@ -29,8 +28,6 @@ export const useFavoritesStore = create<FavoritesStore>()(
       },
       removeFromFavorites: (id) => {
         set({ favorites: get().favorites.filter((item) => item.id !== id) });
-        
-        
       },
       isFavorite: (id) => {
         return get().favorites.some((item) => item.id === id);
