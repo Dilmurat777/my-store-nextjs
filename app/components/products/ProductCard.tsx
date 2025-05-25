@@ -1,40 +1,48 @@
 'use client';
-
-import { useProductStore } from '../../store/useProductStore';
 import React from 'react';
+import { useFavoritesStore } from '@/app/store/favoritesStore';
 
 interface Product {
   id: number;
   title: string;
   price: number;
   image: string;
+  description?: string;
 }
 
 export default function ProductCard({ product }: { product: Product }) {
-	const {favorites, toggleFavorite} = useProductStore();
+  const { addToFavorites, removeFromFavorites, isFavorite } = useFavoritesStore();
+  const [isMounted, setIsMounted] = React.useState(false);
 
-	const isFav = favorites.some(p => p.id === product.id)
+  React.useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  const toggleFavorite = () => {
+    if (isFavorite(product.id)) {
+      removeFromFavorites(product.id);
+    } else {
+      addToFavorites(product);
+    }
+  };
+
   return (
-    <div className="border rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition">
-      <img
-        src={product.image}
-        alt={product.title}
-        className="w-full h-48 object-cover"
-      />
-      <div className="p-4">
-        <h3 className="text-lg font-semibold">{product.title}</h3>
-        <p className="text-blue-600 font-bold mt-2">${product.price}</p>
-		<div className='flex justify-between'>
-			<button onClick={() => toggleFavorite(product)}>
-			{
-				isFav ? '💖 Удалить из избранного' : '🤍 В избранное'
-			}
-		</button>
-        <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700 transition">
-          Подробнее
+    <div className="border p-4 rounded-xl shadow">
+      <img src={product.image} alt={product.title} className="h-48 w-full object-cover rounded" />
+      <h2 className="text-xl font-bold">{product.title}</h2>
+      <p className="text-gray-600">${product.price}</p>
+      <div className='flex flex-col lg:flex-row justify-between'>
+		{isMounted && (
+        <button
+          onClick={toggleFavorite}
+          className={`mt-2 px-2 py-2 rounded text-xs lg:text-sm ${
+            isFavorite(product.id) ? 'bg-red-500 text-white' : 'bg-gray-200 text-black'
+          }`}>
+          {isFavorite(product.id) ? 'Удалить из избранного' : 'В избранное'}
         </button>
-		</div>
-      </div>
+      )}
+	  <button className='mt-2 px-2 py-2 rounded bg-blue-500 text-white hover:bg-blue-600 text-xs lg:text-sm'>Подробнее</button>
+	  </div>
     </div>
   );
 }
