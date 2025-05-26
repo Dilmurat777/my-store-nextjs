@@ -32,10 +32,7 @@ export default function ProductCard({ product }: { product: Product }) {
       <img src={product.image} alt={product.title} className="h-48 w-full object-cover rounded" />
       <h2 className="text-xl font-bold">{product.title}</h2>
       <p className="text-gray-600">${product.price}</p>
-      <div
-        className={`flex flex-col lg:flex-row justify-between ${
-          favorites.length > 0 ? 'lg:flex-col' : ''
-        }`}>
+      <div className={`flex flex-col lg:flex-row justify-between `}>
         {isMounted && (
           <button
             onClick={toggleFavorite}
