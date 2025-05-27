@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
 import { useFavoritesStore } from '@/app/store/favoritesStore';
-
+import { CiHeart } from "react-icons/ci";
+import Link from 'next/link';
 interface Product {
   id: number;
   title: string;
@@ -12,7 +13,7 @@ interface Product {
 
 export default function ProductCard({ product }: { product: Product }) {
   const { addToFavorites, removeFromFavorites, isFavorite } = useFavoritesStore();
-  const favorites = useFavoritesStore((state) => state.favorites);
+
   const [isMounted, setIsMounted] = React.useState(false);
 
   React.useEffect(() => {
@@ -29,7 +30,9 @@ export default function ProductCard({ product }: { product: Product }) {
 
   return (
     <div className="border p-4 rounded-xl shadow hover:shadow-lg transition-all">
-      <img src={product.image} alt={product.title} className="h-48 w-full object-cover rounded" />
+      <Link href={`/product/${product.id}`}>
+        <img src={product.image} alt={product.title} className="h-48 w-full object-cover rounded" />
+      </Link>
       <h2 className="text-xl font-bold">{product.title}</h2>
       <p className="text-gray-600">${product.price}</p>
       <div className={`flex flex-col lg:flex-row justify-between `}>

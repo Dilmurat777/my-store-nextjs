@@ -6,6 +6,7 @@ export const products = [
     price: 120,
     image:
       'https://images.unsplash.com/photo-1695548024599-63bdc726dda0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8JUQwJTlBJUQxJTgwJUQwJUJFJUQxJTgxJUQxJTgxJUQwJUJFJUQwJUIyJUQwJUJBJUQwJUI4JTIwTmlrZXxlbnwwfHwwfHx8MA%3D%3D',
+      description: 'Легкие беговые кроссовки с амортизирующей подошвой. Технология Air Zoom обеспечивает комфорт при длительной носке. Дышащий материал верха и протектор для надежного сцепления.'
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const products = [
     price: 45,
     image:
       'https://images.unsplash.com/photo-1598403031688-e7cfd2c222c4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fCVEMCVBNCVEMSU4MyVEMSU4MiVEMCVCMSVEMCVCRSVEMCVCQiVEMCVCQSVEMCVCMCUyMEFkaWRhc3xlbnwwfHwwfHx8MA%3D%3D',
+      description: 'Классическая хлопковая футболка с логотипом бренда. Мягкий материал премиум-качества. Устойчивая к многократным стиркам форма и цвета. Универсальный базовый элемент гардероба.'
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const products = [
     price: 300,
     image:
       'https://images.unsplash.com/photo-1590688560938-57c514814ddb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fCVEMCVBNyVEMCVCMCVEMSU4MSVEMSU4QiUyMEFwcGxlJTIwV2F0Y2h8ZW58MHx8MHx8fDA%3D',
+      description: 'Умные часы с функцией отслеживания активности и ЭКГ. Водонепроницаемый корпус, до 18 часов работы. Интеграция с iOS, уведомления и возможность совершать звонки.'
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ export const products = [
     price: 1500,
     image:
       'https://images.unsplash.com/photo-1650200414149-b4c77ebdca2c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8JUQwJUE0JUQxJTgzJUQxJTgyJUQwJUIxJUQwJUJFJUQwJUJCJUQwJUJBJUQwJUIwfGVufDB8fDB8fHww',
+       description: 'Оверсайз футболка из органического хлопка. Минималистичный дизайн с контрастными швами. Усиленная горловина сохраняет форму после стирок. Экологичная упаковка.'
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ export const products = [
     price: 8500,
     image:
       'https://images.unsplash.com/photo-1646529461582-ed5275ab11c2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8JUQwJTlFJUQwJUIxJUQxJTgzJUQwJUIyJUQxJThDfGVufDB8fDB8fHww',
+       description: 'Ультралегкие кроссовки с углеродной пластиной. Технология энергвозврата для бега на длинные дистанции. Сетчатый верх с зональной поддержкой стопы.'
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ export const products = [
     price: 3200,
     image:
       'https://images.unsplash.com/photo-1681334921874-5bafe8acf433?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8JUQwJUEwJUQxJThFJUQwJUJBJUQwJUI3JUQwJUIwJUQwJUJBfGVufDB8fDB8fHww',
+      description: 'Городской рюкзак с защитой от кражи. Скрытые карманы, USB-порт для зарядки. Водоотталкивающая ткань и эргономичная спинка. Вместительное основное отделение.'
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ export const products = [
     price: 2200,
     image:
       'https://media.istockphoto.com/id/2194712971/photo/laptop-computer-blank-screen-on-table-in-wall-background.jpg?s=2048x2048&w=is&k=20&c=ejVMIt5dkkhO9iVJdHHNifzU7C0nlT3-XxhkRnjehbE=',
+      description: 'Игровой ноутбук с процессором Core i7 и видеокартой RTX 4060. 144Hz дисплей 15.6", 32GB RAM. Подсветка клавиатуры RGB и система охлаждения с 4 вентиляторами.'
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ export const products = [
     price: 2200,
     image:
       'https://images.unsplash.com/photo-1491841573634-28140fc7ced7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJvb2t8ZW58MHx8MHx8fDA%3D',
+      description: 'Подарочное издание классической литературы в кожаном переплете. Золотое тиснение, мелованная бумага. Коллекционная серия великих произведений XIX века.'
   },
   {
     id: 9,
@@ -70,5 +78,6 @@ export const products = [
     price: 2200,
     image:
       'https://media.istockphoto.com/id/2163593194/photo/close-up-of-necklace-with-diamond-pendants-over-white-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=gJCz5UNcDNdgCiOG88xJ28ib1qc7s2uHfo29OQZEQPY=',
+      description: 'Серебряное кольцо с фианитами. Ручная работа, проба 925. Универсальный дизайн под любой стиль. Подарочная упаковка и сертификат подлинности.'
   },
 ];
